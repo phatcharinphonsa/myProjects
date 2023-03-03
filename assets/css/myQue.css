@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #232A47;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Global Stylings */
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.receipe {
+    width: 60%;
+    height: auto;
+    border: 4px #ededed solid;
+    background-size: 10% auto;
+    background-repeat: repeat-x;
+    margin: auto auto;
+}
+
+.detail {
+    padding: 40px;
+}
+
+.info {
+    font-size: 18px;
+}
+
+.infoBold {
+    font-weight: 700;
+}
+
+.hotpital {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.que {
+    color: #232a47;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.my-que {
+    width: 50%;
+    text-align: center;
+}
+
+.statusQue {
+    background-color: #fcca19;
+    padding: .8rem;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.que1 {
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2rem;
+}
+
+.dateCreate {
+    text-align: center;
+    color: grey;
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .my-que {
+        width: 80%;
+    }
+    .receipe {
+        width: 80%;
+    }
+    .info {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    .my-que {
+        width: 90%;
+    }
+    .receipe {
+        width: 95%;
+    }
+    .info {
+        font-size: 16px;
+    }
+}

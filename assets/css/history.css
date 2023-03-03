@@ -1,0 +1,35 @@
+.boxBorder {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+p.info {
+    margin-bottom: 0rem;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.info {
+    font-size: 16px;
+    text-align: left;
+}
+
+@media (max-width: 689px) {
+    .see-detail {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .boxBorder {
+        width: 95%;
+    }
+}

@@ -1,0 +1,20 @@
+.rep_left,
+.rep_right {
+    margin: 2px;
+}
+
+.rep_left {
+    text-align: right;
+}
+
+.rep_left input,
+.rep_right input{
+    padding: 4px;
+    border-radius: 8px;
+}
+@media (max-width: 576px) {
+    .rep_left,
+    .rep_right {
+        text-align: center;
+    }
+}

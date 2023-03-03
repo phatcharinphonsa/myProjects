@@ -1,0 +1,439 @@
+     :root {
+        --primary-color: #232A47;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+    }
+    
+    .width-50 {
+        width: 50%;
+    }
+    
+    .ml-auto {
+        margin-left: auto;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    /* Progressbar */
+    
+    .progressbar-wrapper {
+        background: #fff;
+        width: 100%;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 100px;
+    }
+    
+    .progressbar li {
+        list-style-type: none;
+        width: 20%;
+        float: left;
+        font-size: 12px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        color: #7d7d7d;
+        margin-bottom: 5%;
+    }
+    
+    .progressbar li:before {
+        width: 45px;
+        height: 45px;
+        content: "";
+        line-height: 45px;
+        border: 2px solid #7d7d7d;
+        display: block;
+        text-align: center;
+        margin: 0 auto 3px auto;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+    }
+    
+    .progressbar li:after {
+        width: 100%;
+        height: 2px;
+        content: '';
+        position: absolute;
+        background-color: #7d7d7d;
+        top: 25px;
+        left: -50%;
+        z-index: 0;
+    }
+    
+    .progressbar li:first-child:after {
+        content: none;
+    }
+    
+    .progressbar li.active {
+        color: #7d7d7d;
+        font-weight: bold;
+    }
+    
+    .progressbar li.active:before {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+    }
+    
+    .progressbar li.active+li:after {
+        background-color: var(--primary-color);
+    }
+    
+    .progressbar li.active:before {
+        background: var(--primary-color);
+        background-size: 60%;
+    }
+    
+    .progressbar li::before {
+        background: #fff;
+        background-size: 60%;
+    }
+    
+    .progressbar {
+        counter-reset: step;
+    }
+    
+    .progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+    }
+    /* Form */
+    
+    .form {
+        width: 80%;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 0.35rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .form-step-active {
+        display: block;
+    }
+    
+    .input-group {
+        margin: 2rem 0;
+    }
+    /* Button */
+    
+    .btns-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.75rem;
+        display: block;
+        text-decoration: none;
+        background-color: var(--primary-color);
+        color: #f3f3f3;
+        text-align: center;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .btn-prev {
+        background-color: rgb(212, 212, 212) !important;
+        margin-top: 25px;
+    }
+    
+    .btn-next {
+        background-color: #FCCA19 !important;
+        margin-top: 25px;
+    }
+    
+    input .btn-warning {
+        background-color: #FCCA19 !important;
+        margin-top: 25px;
+    }
+    
+    .btn:hover {
+        box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+    }
+    /* Step1 */
+    
+    .heading {
+        text-align: center;
+    }
+    
+    .radio-buttons {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .custom-radio input {
+        display: none;
+    }
+    
+    .radio-btn {
+        margin: 5px;
+        width: 200px;
+        height: 200px;
+        border: 3px solid transparent;
+        display: inline-block;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 0 20px #c3c3c367;
+        cursor: pointer;
+    }
+    
+    .radio-btn>i {
+        color: #ffffff;
+        background-color: #FCCA19;
+        font-size: 20px;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        border-radius: 50px;
+        padding: 3px;
+        transition: 0.2s;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .radio-btn .department-icon {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .radio-btn .department-icon i {
+        color: #FCCA19;
+        line-height: 80px;
+        font-size: 60px;
+    }
+    
+    .custom-radio input:checked+.radio-btn {
+        border: 3px solid #FCCA19;
+    }
+    
+    .custom-radio input:checked+.radio-btn>i {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    
+    .radio-btn img {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+    
+    .checkIcon {
+        color: green;
+    }
+    
+    .checkIcon1 {
+        color: red;
+    }
+    
+    .userIcon {
+        margin-right: 4px;
+    }
+    
+    .divide {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    
+    .text {
+        color: #666;
+    }
+    
+    span img {
+        width: 35%;
+    }
+    /* step2 */
+    
+    .departmentReserve {
+        background-color: white;
+        box-shadow: #ccc;
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    .total {
+        font-size: 18px;
+        color: green;
+        font-weight: 500;
+    }
+    
+    .fullReserve {
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        background-color: red;
+        border-radius: 4px;
+        padding: 4px 50px;
+    }
+    
+    .radio-btn img {
+        width: 30%;
+    }
+    /* full calendar */
+    
+    .fc-event-time {
+        display: none;
+    }
+    
+    #calendar {
+        width: 100%;
+        height: 800px;
+    }
+    /* step3 */
+    /* step4 */
+    
+    .receipe {
+        width: 60%;
+        height: auto;
+        border: 4px #ededed solid;
+
+        margin: auto auto;
+        margin-bottom: 10px;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 2%;
+        font-weight: bold;
+    }
+    
+    .detail {
+        padding: 40px;
+    }
+    
+    .info {
+        font-size: 18px;
+    }
+    
+    .infoBold {
+        font-weight: 700;
+    }
+    
+    @media only screen and (max-width: 1200px) {
+        .receipe {
+            width: 100%;
+        }
+        .form {
+            width: 90%;
+        }
+        .detail {
+            padding: 10px;
+        }
+        .progressbar li:before {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .progressbar li:after {
+            width: 100%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background-color: #7d7d7d;
+            top: 15px;
+            left: -50%;
+            z-index: 0;
+        }
+        .receipe {
+            width: 80%;
+        }
+        .heading {
+            font-size: 18px;
+        }
+        .info {
+            font-size: 18px;
+        }
+        #calendar {
+            width: auto;
+            height: 500px;
+        }
+        .fc-daygrid-day-number {
+            font-size: .5em;
+        }
+        .fc-col-header-cell-cushion {
+            font-size: .6em;
+        }
+        .fc-daygrid-more-link {
+            font-size: .6em;
+        }
+        .fc .fc-daygrid-day-bottom {
+            padding-bottom: .7em;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 1.6em !important;
+            margin: 0;
+        }
+        .fc-daygrid-dot-event .fc-event-title {
+            font-size: .6em;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .fc .fc-toolbar-title {
+            font-size: 1.4em !important;
+            margin: 0;
+        }
+        #calendar {
+            width: auto;
+            height: 400px;
+        }
+    }
+    
+    @media only screen and (max-width: 391px) {
+        .receipe {
+            width: 95%;
+        }
+        .heading {
+            font-size: 16px;
+        }
+        .time-title {
+            font-size: 16px;
+        }
+        span .total {
+            font-size: 16px;
+        }
+        .radio-buttons {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .info {
+            font-size: 16px;
+        }
+        #calendar {
+            width: auto;
+            height: 300px;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 1.2em !important;
+            margin: 0;
+        }
+    }

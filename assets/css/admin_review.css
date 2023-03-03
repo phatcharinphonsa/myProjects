@@ -1,0 +1,166 @@
+.con {
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: "sidebar nav nav nav" "sidebar main main main";
+    /* grid-gap: 0.2rem; */
+}
+
+main {
+    grid-area: main;
+    overflow-y: auto;
+}
+
+.main__container {
+    padding: 0px ;
+}
+
+.main__title {
+    display: flex;
+    align-items: center;
+}
+
+.main__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+}
+
+.card .row img {
+    width: 30%;
+}
+
+.progress-label-left {
+    float: left;
+    margin-right: 0.5em;
+    line-height: 1em;
+}
+
+.progress-label-right {
+    float: right;
+    margin-left: 0.3em;
+    line-height: 1em;
+}
+
+.star-light {
+    color: #e9ecef;
+}
+
+
+/* radio */
+
+form {
+    text-align: center;
+}
+
+label.radio {
+    cursor: pointer;
+    margin: 5px 5px 5px 5px;
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+label.radio span {
+    text-align: center;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1.5px solid #515151;
+    display: inline-block;
+    color: #68696B;
+    border-radius: 3px;
+    font-size: 12px !important;
+    font-weight: bold
+}
+
+label.radio input:checked+span {
+    background: #68696B;
+    color: white
+}
+
+#review_content {
+    overflow-y: scroll;
+    height: 60%;
+}
+
+#review_content::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*  */
+
+@media only screen and (max-width: 978px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: "nav" "main";
+    }
+    #sidebar {
+        display: none;
+    }
+    .sidebar__title>i {
+        display: inline;
+    }
+    .nav_icon {
+        display: inline;
+    }
+    .card .row img {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .main__cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    .card .row img {
+        width: 40%;
+    }
+    .col-md-1{
+        margin-right:15px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .navbar__left {
+        display: none;
+    }
+    .card .row img {
+        width: 100%;
+    }
+    label.radio span {
+        width: 110px;
+    }
+}

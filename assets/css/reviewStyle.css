@@ -1,0 +1,78 @@
+.boxBorder {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* radio */
+
+label.radio {
+    cursor: pointer;
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+label.radio span {
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1.5px solid #515151;
+    display: inline-block;
+    color: #68696B;
+    border-radius: 3px;
+    font-size: 12px !important;
+    font-weight: bold
+}
+
+label.radio input:checked+span {
+    background: #68696B;
+    color: white
+}
+    .progress-label-left {
+        float: left;
+        margin-right: 0.5em;
+        line-height: 1em;
+    }
+
+    .progress-label-right {
+        float: right;
+        margin-left: 0.3em;
+        line-height: 1em;
+    }
+
+    .star-light {
+        color: #e9ecef;
+    }
+
+#review_content {
+    overflow-y: scroll;
+    height: 60%;
+}
+
+#review_content::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .boxBorder {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    label.radio span {
+        width: 100px;
+    }
+}
+
+
+/*  */

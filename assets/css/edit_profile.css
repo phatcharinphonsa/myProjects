@@ -1,0 +1,71 @@
+.form-profile {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profileImg img {
+    width: 15%;
+    border-radius: 50% 50%;
+}
+
+.profileImg {
+    text-align: center;
+}
+
+.card {
+    height: max-content;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+.info label {
+    padding: 0px;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.row {
+    margin-bottom: 8px;
+}
+
+.float-right .edit a {
+    text-decoration: none;
+    color: gray;
+}
+
+@media only screen and (max-width: 768px) {
+    .form-profile {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    .form-profile {
+        width: 90%;
+    }
+}

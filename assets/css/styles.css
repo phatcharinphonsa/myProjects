@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+nav {
+    background: #232A47;
+    padding: 5px 20px;
+}
+
+.btn-primary {
+    background-color: tomato;
+}
+
+.mt-2 {
+    font-size: 20px;
+}
+
+.fa-li,
+.text-uppercase {
+    color: #FCCA19;
+}
+
+
+/* .navbar-nav {
+    margin-left: 10px;
+} */
+
+
+/* .nameLogin {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nameLogin:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+} */
+
+.dropdown-menu li {
+    padding-left: 10px;
+}
+
+li .line {
+    border-bottom: grey 2px solid;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #232A47;
+    padding-left: 10px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.dropdown {
+    list-style-type: none;
+}
+
+.btn-link {
+    text-decoration: none !important;
+}
+
+.nav-profile,
+.log-out {
+    display: none;
+}
+
+.line-connect {
+    display: block;
+}
+
+.fa-line {
+    font-size: 22px;
+}
+
+.line-connect button {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 991px) {
+    .see-profile {
+        color: gainsboro;
+        font-size: 12px;
+    }
+    .nav-profile,
+    .log-out,
+    .line-connect {
+        display: block;
+    }
+    .dropdown-divider {
+        background-color: whitesmoke;
+    }
+    #navbarCollapse li,
+    .dropdown {
+        display: none;
+    }
+    .profile-i {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 391px) {
+    .see-profile {
+        color: gainsboro;
+        font-size: 12px;
+    }
+    .nav-profile,
+    .log-out,
+    .line-connect {
+        display: block;
+    }
+    .dropdown-divider {
+        background-color: whitesmoke;
+    }
+    #navbarCollapse li,
+    .dropdown {
+        display: none;
+    }
+    .profile-i {
+        font-size: 42px;
+    }
+}
